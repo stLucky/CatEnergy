@@ -2,11 +2,11 @@
 <html class="page" lang="ru">
 <head>
   <meta charset="utf-8">
-  <title>функциональное питание для котов "Cat Energy"</title>
+  <title>Функциональное питание для котов "Cat Energy"</title>
 </head>
 <body class="page__body">
   <header class="header">
-    <a class="header__logo">
+    <a href="index.html" class="header__logo">
       <img src="https://via.placeholder.com/190x38" width="190" height="38" alt="Логотип Cat Energy">
     </a>
     <nav class="main-nav">
@@ -17,7 +17,7 @@
       </button>
       <ul class="main-nav__list">
         <li class="main-nav__item">
-          <a>
+          <a class="index.html">
             Главная
           </a>
         </li>
@@ -27,7 +27,7 @@
           </a>
         </li>
         <li class="main-nav__item main-nav__item--current">
-          <a href="form.html">
+          <a>
             Подбор программы
           </a>
         </li>
@@ -43,19 +43,19 @@
     </p>
     <form class="form" action="https://echo.htmlacademy.ru" method="GET">
       <fieldset class="form__fieldset">
-        <p class="form__item">
+        <p class="form__field">
           <label>
             Имя:*
             <input class="form__input" type="text" name="cat-name" placeholder="Барсик" required>
           </label>
         </p>
-        <p class="form__item">
+        <p class="form__field">
           <label>
             Вес(кг):*
             <input class="form__input" type="number" name="cat-weight" placeholder="7" required>
           </label>
         </p>
-        <p class="form__item">
+        <p class="form__field">
           <label>
             Возраст(лет):
             <input class="form__input" type="number" name="cat-age" placeholder="7">
@@ -64,21 +64,21 @@
       </fieldset>
       <fieldset class="form__fieldset">
         <ul class="form__list">
-          <li class="form__item">
-            <label>
-              <input class="form__input form__input--radio" type="radio" name="program">
+          <li class="form__field">
+            <label class="form__label-radio">
+              <input class="form__radio" type="radio" name="program">
               Похудение
             </label>
           </li>
-          <li class="form__item">
-            <label>
-              <input class="form__input form__input--radio" type="radio" name="program">
+          <li class="form__field">
+            <label class="form__label-radio">
+              <input class="form__radio" type="radio" name="program">
               Набор массы
             </label>
           </li>
-          <li class="form__item">
-            <label>
-              <input class="form__input form__input--radio" type="radio" name="program">
+          <li class="form__field">
+            <label class="form__label-radio">
+              <input class="form__radio" type="radio" name="program">
               Не знаю (нужен ваш совет)
             </label>
           </li>
@@ -86,14 +86,13 @@
       </fieldset>
       <fieldset class="form__fieldset form__fieldset--theme-green">
         <legend class="form__legend">Контактные данные (владельца кота)</legend>
-        <p class="form__item">
+        <p class="form__field">
           <label>
             E-mail:*
-            <input class="form__input form__input--email" type="email" name="email" placeholder="kuklachev@gmail.com"
-              required>
+            <input class="form__input form__input--email" type="email" name="email" placeholder="kuklachev@gmail.com" required>
           </label>
         </p>
-        <p class="form__item">
+        <p class="form__field">
           <label>
             Телефон:*
             <input class="form__input form__input--tel" type="tel" name="phone" placeholder="8(960)900-60-90" required>
@@ -105,8 +104,7 @@
           Комментарий
         </legend>
         <label>
-          <textarea class="form__input" name="comment" placeholder="Расскажите обо всех повадках кота"
-            aria-label="Ваш комментарий"></textarea>
+          <textarea class="form__input" name="comment" placeholder="Расскажите обо всех повадках кота" aria-label="Ваш комментарий"></textarea>
         </label>
       </fieldset>
       <fieldset class="form__fieldset form__fieldset--theme-green">
@@ -114,59 +112,75 @@
           Дополнительно
         </legend>
         <ul class="form__list">
-          <li class="form__item">
-            <label>
-              <input class="form__input form__input--checkbox" type="checkbox" name="sweetener">
+          <li class="form__field">
+            <label class="form__label-checkbox">
+              <input class="form__checkbox" type="checkbox" name="sweetener" checked>
               Сахарозаменитель
             </label>
           </li>
-          <li class="form__item">
-            <label>
-              <input class="form__input form__input--checkbox" type="checkbox" name="water">
+          <li class="form__field">
+            <label class="form__label-checkbox">
+              <input class="form__checkbox" type="checkbox" name="water">
               Питьевая вода
             </label>
           </li>
-          <li class="form__item">
-            <label>
-              <input class="form__input form__input--checkbox" type="checkbox" name="milk">
+          <li class="form__field">
+            <label class="form__label-checkbox">
+              <input class="form__checkbox" type="checkbox" name="milk">
               Молоко
             </label>
           </li>
-          <li class="form__item">
-            <label>
-              <input class="form__input form__input--checkbox" type="checkbox" name="vitamins">
+          <li class="form__field">
+            <label class="form__label-checkbox">
+              <input class="form__checkbox" type="checkbox" name="vitamins">
               Витамины
             </label>
           </li>
         </ul>
       </fieldset>
-      <button class="form__button" type="submit">Отправить заявку</button>
-      <small class="form__footnote">* — Обязательные поля</small>
+      <button class="form__button" type="submit">
+        Отправить заявку
+      </button>
+      <small class="form__footnote">
+        * — Обязательные поля
+      </small>
     </form>
   </main>
   <footer class="footer">
     <div class="footer__contacts contacts">
-      <p class="contacts__title">Приглашаем к сотрудничеству дилеров!</p>
-      <p class="contacts__text">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+      <p class="contacts__title">
+        Приглашаем к сотрудничеству дилеров!
+      </p>
+      <p class="contacts__text">
+        ул. Большая Конюшенная, д. 19/8 Санкт-Петербург
+      </p>
     </div>
-    <img class="footer__map" src="https://via.placeholder.com/320x362" width="320" height="362" alt="Офис компании по адресу ул.
-			Большая Конюшенная 19/8, Санкт-Петербург">
-    <a class="footer__logo">
+    <img class="footer__map" src="https://via.placeholder.com/320x362" width="320" height="362"
+      alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
+    <a href="index.html" class="footer__logo">
       <img src="https://via.placeholder.com/128x24" width="128" height="24" alt="Логотип Cat Energy">
     </a>
     <ul class="footer__social social">
       <li class="social__item">
-        <a class="social__link social__link--vk" href="https://vk.com/htmlacademy">Мы в Вконтакте</a>
+        <a class="social__link social__link--vk" href="https://vk.com/htmlacademy">
+          Мы в Вконтакте
+        </a>
       </li>
       <li class="social__item">
-        <a class="social__link social__link--fb" href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке</a>
+        <a class="social__link social__link--fb" href="https://www.facebook.com/htmlacademy">
+          Мы в Фейсбуке
+        </a>
       </li>
       <li class="social__item">
-        <a class="social__link social__link--inst" href="https://www.instagram.com/htmlacademy">Мы в Инстаграме</a>
+        <a class="social__link social__link--inst" href="https://www.instagram.com/htmlacademy">
+          Мы в Инстаграме
+        </a>
       </li>
     </ul>
     <div class="footer__copyright">
-      <a class="footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">Html Academy</a>
+      <a class="footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">
+        Html Academy
+      </a>
     </div>
   </footer>
 </body>
