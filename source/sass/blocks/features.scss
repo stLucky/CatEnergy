@@ -1,0 +1,58 @@
+.features__title {
+  margin: 0 0 38px;
+
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 40px;
+}
+
+.features__list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.features__item {
+  position: relative;
+
+  padding: 2px 0 4px 80px;
+
+  line-height: 18px;
+  font-family: "Arial", sans-serif;
+  color: $grey-700;
+
+  &:not(:last-child) {
+    margin: 0 0 20px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 60px;
+    height: 60px;
+
+    background-color: $green-400;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--theme-healthy::before {
+    background-image: url(../../img/features-healthy.svg);
+  }
+
+  &--theme-powdery::before {
+    background-image: url(../../img/features-powdery.svg);
+  }
+
+  &--theme-food::before {
+    background-image: url(../../img/features-food.svg);
+  }
+
+  &--theme-thime::before {
+    background-image: url(../../img/features-thime.svg);
+  }
+}
