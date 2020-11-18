@@ -1,0 +1,59 @@
+.form__fieldset {
+  margin: 0;
+  padding: 20px 0 22px 0;
+
+  border: none;
+  border-bottom: 1px solid $grey-425;
+
+  &--theme-green {
+    border-top: 2px solid $green-400;
+    border-bottom: none;
+  }
+}
+
+.form__legend {
+  font-size: 24px;
+  line-height: 26px;
+}
+
+.form__field {
+  margin: 0 0 13px;
+
+  text-transform: uppercase;
+
+  @include format-form-text;
+}
+
+.form__input {
+  position: relative;
+
+  padding: 14px 15px;
+
+  border: 1px solid $grey-350;
+
+  @include format-form-text;
+
+  &::placeholder {
+    font-family: $custom-font;
+    text-transform: uppercase;
+
+    @include format-form-text;
+  }
+}
+
+.form__label-radio {
+  color: $black-300;
+}
+
+.form__label-checkbox {
+  color: $black-400;
+}
+
+.form__button {
+  padding: 7px 73px;
+  margin: 0 0 21px;
+}
+
+.form__footnote {
+  display: inline-block;
+}
