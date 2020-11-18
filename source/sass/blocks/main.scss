@@ -1,3 +1,8 @@
+.main--inner-pages {
+  padding: 27px 0 32px 0;
+  border-top: 1px solid $grey-425;
+}
+
 .main__promo {
   margin: 0 0 22px;
 }
@@ -8,4 +13,15 @@
 
 .main__features {
   margin: 0 0 42px;
+}
+
+.main__title {
+  margin: 0 0 37px;
+}
+
+.main__text {
+  margin: 0 0 19px;
+
+  line-height: 18px;
+  text-transform: uppercase;
 }
