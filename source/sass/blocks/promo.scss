@@ -2,7 +2,7 @@
   text-align: center;
   color: $white-400;
 
-  background-image: linear-gradient(rgba($green-400, 0.85), rgba($green-400, 0.85)), url(../../img/background-cat-mobile.jpg);
+  background-image: linear-gradient(rgba($green-400, 0.85), rgba($green-400, 0.85)), url("../../img/background-cat-mobile.jpg");
   background-repeat: no-repeat;
   background-position: top center;
   background-size: 320px 302px;
@@ -10,10 +10,6 @@
 
 .promo__title {
   margin: 0 0 25px;
-
-  font-weight: 400;
-  font-size: 36px;
-  line-height: 36px;
 }
 
 .promo__slogan {
@@ -30,8 +26,5 @@
 }
 
 .promo__button {
-  margin: 0 auto;
-  padding: 7px 74px;
-
-  text-align: center;
+  padding: 7px 73px;
 }

@@ -3,13 +3,14 @@
 
   font-weight: 400;
   font-size: 14px;
-  font-family: "Oswald", "Arial", sans-serif;
+  font-family: $custom-font;
   color: $black-400;
 }
 
 .page__body {
   display: grid;
-  min-width: 340px;
+  align-content: start;
+  min-width: 320px;
   min-height: 100%;
   margin: 0;
 

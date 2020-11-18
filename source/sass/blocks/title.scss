@@ -1,0 +1,25 @@
+.title {
+  margin: 0;
+
+  font-weight: 400;
+
+  &--small {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  &--medium {
+    font-size: 24px;
+    line-height: 37px;
+  }
+
+  &--large {
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  &--x-large {
+    font-size: 36px;
+    line-height: 40px;
+  }
+}
