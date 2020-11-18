@@ -1,5 +1,4 @@
-.footer__copyright-link {
-  font-size: 16px;
+@mixin format-text {
   line-height: 18px;
   font-family: $basic-font;
   color: $grey-700;
