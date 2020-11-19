@@ -1,0 +1,16 @@
+.gift {
+  width: 280px;
+  min-height: 289px;
+
+  background-color: $green-400;
+  background-image: url("../img/gift-background-mobile.jpg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.gift__text {
+  font-size: 16px;
+  line-height: 20px;
+  font-family: $basic-font;
+  color: $white-400;
+}

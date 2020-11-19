@@ -11,10 +11,18 @@
   border: none;
 
   &--primary {
-    font-size: 14px;
-    line-height: 18px;
+    font-size: 16px;
+    line-height: 20px;
     color: $white-400;
 
     background-color: $green-400;
+  }
+
+  &--theme-smoke {
+    font-size: 16px;
+    line-height: 20px;
+    color: $grey-700;
+
+    background-color: $grey-400;
   }
 }

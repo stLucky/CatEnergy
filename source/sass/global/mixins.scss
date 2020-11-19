@@ -6,6 +6,10 @@
 
 @mixin format-form-text {
   font-size: 16px;
-  line-height: 18px;
+  color: $grey-700;
+}
+
+@mixin format-product-desc {
+  font-family: $basic-font;
   color: $grey-700;
 }

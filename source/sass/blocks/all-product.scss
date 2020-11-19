@@ -1,0 +1,18 @@
+.all-product__title {
+  margin: 0 0 8px;
+
+  text-transform: uppercase;
+}
+
+.all-product__text {
+  margin: 0 0 21px;
+
+  font-size: 12px;
+  line-height: 16px;
+
+  @include format-product-desc;
+}
+
+.all-product__button {
+  padding: 6px 109px;
+}

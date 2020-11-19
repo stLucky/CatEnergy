@@ -19,6 +19,7 @@
 .form__field {
   margin: 0 0 13px;
 
+  line-height: 18px;
   text-transform: uppercase;
 
   @include format-form-text;
@@ -28,6 +29,9 @@
   position: relative;
 
   padding: 14px 15px;
+
+  line-height: 20px;
+  font-family: inherit;
 
   border: 1px solid $grey-350;
 
@@ -41,6 +45,10 @@
   }
 }
 
+.form__textarea {
+  resize: none;
+}
+
 .form__label-radio {
   color: $black-300;
 }
@@ -50,10 +58,10 @@
 }
 
 .form__button {
-  padding: 7px 73px;
   margin: 0 0 21px;
+  padding: 7px 73px;
 }
 
 .form__footnote {
-  display: inline-block;
+  display: inline-flex;
 }

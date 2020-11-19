@@ -3,9 +3,19 @@
 
   font-weight: 400;
 
+  &--s-small {
+    font-size: 16px;
+    line-height: 16px;
+  }
+
   &--small {
     font-size: 16px;
     line-height: 20px;
+  }
+
+  &--s-medium {
+    font-size: 24px;
+    line-height: 24px;
   }
 
   &--medium {
@@ -21,5 +31,9 @@
   &--x-large {
     font-size: 36px;
     line-height: 40px;
+  }
+
+  &--theme-dark {
+    color: $black-350;
   }
 }
