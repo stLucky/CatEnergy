@@ -4,4 +4,44 @@
   line-height: 20px;
   color: $black-400;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+  }
 }
+
+.main-nav__toggle {
+  min-width: 24px;
+  height: 18px;
+
+  background-image: linear-gradient(to top, $black-400 2px, transparent 2px, transparent 8px, $black-400 8px, $black-400 10px, transparent 10px, transparent 16px, $black-400 16px);
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.main-nav__list {
+  @media (max-width: $mobile-width-only) {
+    display: none;
+  }
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+  }
+}
+
+.main-nav__item {
+  @media (min-width: $tablet-width) {
+    margin: 0 35px 0 0;
+  }
+
+  &:last-child {
+    @media (min-width: $tablet-width) {
+    margin: 0;
+  }
+  }
+}
+

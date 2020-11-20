@@ -1,5 +1,23 @@
+.features__list {
+  @media (min-width: $tablet-width) {
+    display: grid;
+
+    gap: 60px;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: $desktop-width) {
+    gap: 80px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
 .features__title {
   margin: 0 0 38px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 0 77px;
+  }
 }
 
 .features__item {
@@ -38,5 +56,9 @@
 
   &--theme-thime::before {
     background-image: url("../img/features-thime.svg");
+  }
+
+  @media (min-width: $tablet-width) {
+    @include format-text-tablet;
   }
 }

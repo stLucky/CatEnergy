@@ -7,6 +7,7 @@ $green-400: #68b738;
 $green-500: #5eaa2f;
 $green-550: #5eaa2f;
 $grey-350: #e7e7e7;
+$grey-375: #dcdcdc;
 $grey-400: #f2f2f2;
 $grey-425: #d9d9d9;
 $grey-450: #eaeaea;
@@ -23,3 +24,9 @@ $white-400: #ffffff;
 
 $basic-font: "Arial", sans-serif;
 $custom-font: "Oswald", "Arial", sans-serif;
+
+// Viewports
+
+$mobile-width-only: 767px;
+$tablet-width: 768px;
+$desktop-width: 1440px;

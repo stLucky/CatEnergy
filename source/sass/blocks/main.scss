@@ -9,10 +9,26 @@
 
 .main__programs {
   margin: 0 0 27px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 0 45px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 0 71px;
+  }
 }
 
 .main__features {
   margin: 0 0 42px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 0 90px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 0 11px;
+  }
 }
 
 .main__title {

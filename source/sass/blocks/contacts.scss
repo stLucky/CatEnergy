@@ -1,5 +1,9 @@
 .contacts {
   padding: 28px 20px 22px;
+
+  @media (min-width: $desktop-width) {
+    position: absolute;
+  }
 }
 
 .contacts__title {
@@ -9,6 +13,11 @@
   line-height: 18px;
   color: $black-350;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 21px;
+  }
 }
 
 .contacts__text {
@@ -17,4 +26,9 @@
   line-height: 20px;
   font-family: $basic-font;
   color: $grey-700;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 20px;
+  }
 }
