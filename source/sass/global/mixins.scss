@@ -18,3 +18,13 @@
   font-family: $basic-font;
   color: $grey-700;
 }
+
+@mixin decor-pseudo-border {
+  content: "";
+  position: absolute;
+  bottom: 0;
+
+  width: 100vw;
+
+  border: 1px solid $grey-325;
+}

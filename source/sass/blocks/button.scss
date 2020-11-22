@@ -16,6 +16,10 @@
     color: $white-400;
 
     background-color: $green-400;
+
+    @media (min-width: $tablet-width) {
+      font-size: 20px;
+    }
   }
 
   &--secondary {

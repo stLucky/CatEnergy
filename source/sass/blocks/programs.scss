@@ -18,7 +18,11 @@
     margin: 0 0 30px;
 
     &:last-child {
-      margin: 0 0 30px;
+      margin: 0;
     }
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
   }
 }

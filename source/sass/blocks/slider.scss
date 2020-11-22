@@ -1,9 +1,22 @@
 .slider {
   text-align: center;
+
+  @media (min-width: $tablet-width) and (max-width: $tablet-width-only) {
+    background-color: $grey-450;
+    padding: 0 0 33px;
+  }
 }
 
 .slider__list {
   margin: 0 0 23px;
+}
+
+.slider__item {
+  display: none;
+
+  &--current {
+    display: block;
+  }
 }
 
 .slider__control {

@@ -4,7 +4,7 @@
   background-color: $grey-450;
 
   @media (min-width: $tablet-width) {
-    padding: 0 0 67px;
+    padding: 0;
 
     background-color: transparent;
   }
@@ -30,26 +30,28 @@
   }
 }
 
-.example__container-desktop {
+.example__content {
   @media (min-width: $desktop-width) {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+
     gap: 80px;
+    grid-template-columns: 1fr 1fr;
+    background-color: $grey-400;
   }
 }
 
-.example__container-tablet {
+.example__content-result {
   @media (min-width: $tablet-width) {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-
     margin: 0 0 59px;
   }
 
   @media (min-width: $desktop-width) {
     display: block;
+    margin: 0;
   }
 }
 

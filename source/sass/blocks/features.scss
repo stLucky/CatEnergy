@@ -1,8 +1,21 @@
+.features {
+  @media (min-width: $tablet-width) {
+    padding: 0 0 47px;
+    border-bottom: 1px solid $grey-325;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
+    border: none;
+  }
+}
+
 .features__list {
   @media (min-width: $tablet-width) {
     display: grid;
 
-    gap: 60px;
+    column-gap: 60px;
+    row-gap: 37px;
     grid-template-columns: 1fr 1fr;
   }
 
@@ -14,10 +27,6 @@
 
 .features__title {
   margin: 0 0 38px;
-
-  @media (min-width: $tablet-width) {
-    margin: 0 0 77px;
-  }
 }
 
 .features__item {
@@ -59,6 +68,47 @@
   }
 
   @media (min-width: $tablet-width) {
+    position: relative;
+
+    display: block;
+    margin: 0;
+    padding: 40px 0 68px;
+
     @include format-text-tablet;
+
+    &::before {
+      display: block;
+      width: 80px;
+      height: 80px;
+      margin: 0 0 31px;
+    }
+
+    &::after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: -1;
+
+      font-size: 280px;
+      line-height: 280px;
+      font-family: $custom-font;
+      color: $grey-400;
+    }
+
+    &--theme-healthy::after {
+      content: "1";
+    }
+
+    &--theme-powdery::after {
+      content: "2";
+    }
+
+    &--theme-food::after {
+      content: "3";
+    }
+
+    &--theme-thime::after {
+      content: "4";
+    }
   }
 }
