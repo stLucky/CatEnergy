@@ -1,20 +1,47 @@
 .contacts {
-  padding: 28px 20px 22px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 28px 0 22px;
+
+  @media (min-width: $tablet-width) {
+    align-items: center;
+    padding: 62px 41px 51px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 50px;
+    min-width: 570px;
+    background-color: $white-400;
+  }
 }
 
 .contacts__title {
+  max-width: 140px;
   margin: 0;
 
   font-size: 16px;
   line-height: 18px;
   color: $black-350;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 21px;
+  }
 }
 
 .contacts__text {
+  max-width: 140px;
   margin: 0;
 
   line-height: 20px;
   font-family: $basic-font;
   color: $grey-700;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 20px;
+    text-align: right;
+  }
 }

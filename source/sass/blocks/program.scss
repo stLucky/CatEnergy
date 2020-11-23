@@ -2,22 +2,79 @@
   padding: 20px;
 
   background-color: $grey-400;
+
+  @media (min-width: $tablet-width) {
+    padding: 77px 0 53px 52px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 52px;
+  }
 }
 
-.programs__item {
-  margin: 0 0 20px;
+.program__content {
+  @media (min-width: $tablet-width) and (max-width: $tablet-width-only) {
+    position: relative;
 
-  &:last-child {
-    margin: 0;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+
+    &--slim {
+      padding: 0 262px 0 0;
+
+      &::after {
+        right: 62px;
+
+        width: 200px;
+        height: 211px;
+
+        background-image: url("../img/program-slim.svg");
+      }
+    }
+
+    &--weight {
+      padding: 0 296px 0 0;
+
+      &::after {
+        right: 34px;
+
+        width: 268px;
+        height: 200px;
+
+        background-image: url("../img/program-weight.svg");
+      }
+    }
   }
 }
 
 .program__title {
   display: flex;
   align-items: center;
-  margin: 0 0 22px;
+  margin: 0 0 29px;
 
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 0 24px;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 0 73px;
+
+    &::before {
+      display: block;
+    }
+  }
 
   &::before {
     content: "";
@@ -54,6 +111,17 @@
   border-bottom: 1px solid $grey-425;
 
   @include format-text;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 0 48px;
+    padding: 0;
+
+    color: $black-400;
+
+    border-bottom: none;
+
+    @include format-text-tablet;
+  }
 }
 
 .program__link {
@@ -64,6 +132,7 @@
   font-size: 16px;
   line-height: 16px;
   color: $black-400;
+  text-transform: uppercase;
 
   &::after {
     content: "";
@@ -87,5 +156,18 @@
     border-top-color: transparent;
     border-right-width: 0;
     border-bottom-color: transparent;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+
+    &::after {
+      top: 16px;
+    }
+
+    &::before {
+      top: 12px;
+    }
   }
 }

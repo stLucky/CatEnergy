@@ -16,9 +16,13 @@
     color: $white-400;
 
     background-color: $green-400;
+
+    @media (min-width: $tablet-width) {
+      font-size: 20px;
+    }
   }
 
-  &--theme-smoke {
+  &--secondary {
     font-size: 16px;
     line-height: 20px;
     color: $grey-700;

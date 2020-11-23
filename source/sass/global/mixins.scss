@@ -4,6 +4,11 @@
   color: $grey-700;
 }
 
+@mixin format-text-tablet {
+  font-size: 16px;
+  line-height: 24px;
+}
+
 @mixin format-form-text {
   font-size: 16px;
   color: $grey-700;
@@ -12,4 +17,14 @@
 @mixin format-product-desc {
   font-family: $basic-font;
   color: $grey-700;
+}
+
+@mixin decor-pseudo-border {
+  content: "";
+  position: absolute;
+  bottom: 0;
+
+  width: 100vw;
+
+  border: 1px solid $grey-325;
 }
