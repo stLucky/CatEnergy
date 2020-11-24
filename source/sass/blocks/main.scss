@@ -35,6 +35,16 @@
   @media (min-width: $tablet-width) {
     margin: 0 0 54px;
   }
+
+  @media (min-width: $desktop-width) {
+    padding: 37px 0 0;
+  }
+}
+
+.main__container {
+  @media (min-width: $tablet-width) and (max-width: $tablet-width-only) {
+    padding: 0 40px;
+  }
 }
 
 .main__text {
@@ -46,6 +56,6 @@
   @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 30px;
-    margin: 0 0 46px;
+    margin: 0 0 66px;
   }
 }

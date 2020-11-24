@@ -1,0 +1,40 @@
+.form-top__fieldset {
+  position: relative;
+
+  margin: 0;
+  padding: 20px 0 22px 0;
+
+  &::before,
+  &::after {
+    @include decor-pseudo-border;
+  }
+
+  &::before {
+    right: 50%;
+  }
+
+  &::after {
+    left: 50%;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin: 0 0 71px;
+
+    &::before,
+    &::after {
+      display: none;
+    }
+
+    &:last-child {
+      padding: 25px 28px;
+
+      border: 1px solid $grey-350;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 48%;
+    margin: 0;
+    padding: 0;
+  }
+}
