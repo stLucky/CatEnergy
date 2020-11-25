@@ -1,10 +1,50 @@
 .header {
+  @media (max-width: $mobile-width-only) {
+    &__main-nav {
+      display: none;
+    }
+  }
+}
+
+.header--opened {
+  @media (max-width: $mobile-width-only) {
+    .header__main-nav {
+      display: block;
+    }
+
+    .header__toggle {
+      position: relative;
+
+      background: none;
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 8px;
+        left: 0;
+
+        width: 24px;
+        height: 2px;
+
+        background-color: $black-400;
+      }
+
+      &::before {
+        transform: rotate(45deg);
+      }
+
+      &::after {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+}
+
+.header__container {
   @media (min-width: $tablet-width) {
     display: flex;
     justify-content: space-between;
-  }
-
-  @media (min-width: $desktop-width) {
     align-items: flex-end;
   }
 }
@@ -12,23 +52,22 @@
 .header__top {
   @media (max-width: $mobile-width-only) {
     position: relative;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 11px 0 17px;
 
-    &::after,
-    &::before {
+    &::before,
+    &::after {
       @include decor-pseudo-border;
     }
 
-    &::after {
-      right: 0;
+    &::before {
+      right: 50%;
     }
 
-    &::before {
-      left: 0;
+    &::after {
+      left: 50%;
     }
   }
 }
@@ -38,7 +77,7 @@
 }
 
 .header__toggle {
-  min-width: 24px;
+  width: 24px;
   height: 18px;
 
   background-image: linear-gradient(to top, $black-400 2px, transparent 2px, transparent 8px, $black-400 8px, $black-400 10px, transparent 10px, transparent 16px, $black-400 16px);
