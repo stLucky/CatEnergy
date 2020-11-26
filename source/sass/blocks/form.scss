@@ -329,6 +329,8 @@
 }
 
 .form__button {
+  margin: 0 0 21px;
+
   @media (min-width: $tablet-width) {
     width: 35%;
     margin: 0 61px 0 0;
