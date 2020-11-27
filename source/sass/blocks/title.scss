@@ -3,19 +3,55 @@
 
   font-weight: 400;
 
+  &--decor {
+    position: relative;
+
+    @media (max-width: $mobile-width-only) {
+      &::before,
+      &::after {
+        @include decor-pseudo-border;
+
+        bottom: -37px;
+      }
+
+      &::before {
+        right: 50%;
+      }
+
+      &::after {
+        left: 50%;
+      }
+    }
+  }
+
   &--s-small {
     font-size: 16px;
     line-height: 16px;
+
+    @media (min-width: $tablet-width) {
+      font-size: 20px;
+      line-height: 20px;
+    }
   }
 
   &--small {
     font-size: 16px;
     line-height: 20px;
+
+    @media (min-width: $tablet-width) {
+      font-size: 20px;
+      line-height: 24px;
+    }
   }
 
   &--s-medium {
     font-size: 24px;
     line-height: 24px;
+
+    @media (min-width: $tablet-width) {
+      font-size: 36px;
+      line-height: 36px;
+    }
   }
 
   &--medium {

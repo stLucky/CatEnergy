@@ -212,6 +212,8 @@
 
   color: $black-300;
 
+  cursor: pointer;
+
   &::before {
     content: "";
 
@@ -329,6 +331,10 @@
 }
 
 .form__button {
+  margin: 0 0 21px;
+
+  cursor: pointer;
+
   @media (min-width: $tablet-width) {
     width: 35%;
     margin: 0 61px 0 0;

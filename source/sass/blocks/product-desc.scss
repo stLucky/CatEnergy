@@ -1,0 +1,17 @@
+.product-desc {
+  font-size: 12px;
+  line-height: 16px;
+
+  @include format-product-desc;
+}
+
+.product-desc__row {
+  display: flex;
+  justify-content: space-between;
+
+  @media (min-width: $mobile-tablet-width) {
+    padding: 7px 0 7px;
+    font-size: 16px;
+    border-bottom: 1px solid $grey-500;
+  }
+}
