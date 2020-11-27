@@ -1,12 +1,15 @@
 .all-product {
+  position: relative;
+
+  order: 1;
+  padding: 51px 40px 40px;
+
   text-align: center;
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: $mobile-tablet-width) {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    align-self: flex-end;
-    min-height: 429px;
 
     border: 2px solid $grey-400;
   }
@@ -32,14 +35,14 @@
     background-repeat: no-repeat;
     background-size: cover;
 
-    @media (min-width: $tablet-width) {
+    @media (min-width: $mobile-tablet-width) {
       width: 60px;
       height: 60px;
-      margin: 0 0 49px;
+      margin: 0 0 59px;
     }
   }
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: $mobile-tablet-width) {
     margin: 0 0 23px;
   }
 }
@@ -52,7 +55,7 @@
 
   @include format-product-desc;
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: $mobile-tablet-width) {
     margin: 0 0 87px;
 
     font-size: 16px;

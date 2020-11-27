@@ -13,6 +13,7 @@
 .additional-products__title {
   position: relative;
 
+
   display: inline-flex;
   margin: 0 0 35px;
   padding: 0 22px 0 0;
@@ -34,10 +35,12 @@
     padding: 0 36px;
 
     &::after {
+
       top: 20px;
     }
 
     &::before {
+
       content: "";
       position: absolute;
       top: 20px;

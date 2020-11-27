@@ -64,6 +64,10 @@
   margin: 0 0 28px;
 
   @media (min-width: $tablet-width) {
-    margin: 0 0 68px;
+    margin: 0 0 8px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 0 12px;
   }
 }
