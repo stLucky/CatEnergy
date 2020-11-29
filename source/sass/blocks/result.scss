@@ -1,20 +1,65 @@
 .result {
-  padding: 14px 22px 0;
   align-items: center;
+  width: 124px;
+  padding: 15px 0 0;
+
   text-align: center;
+
+  border: 1px solid $grey-500;
+  border-radius: 3px;
+
+  @media (min-width: $tablet-width) {
+    width: 162px;
+  }
 }
 
 .result__term {
-  margin: 0 0 12px;
+  margin: 0 0 9px;
+
   font-size: 24px;
   line-height: 24px;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    font-size: 30px;
+    line-height: 37px;
+
+    margin: 0;
+  }
 }
 
 .result__definition {
-  margin: 0;
+  position: relative;
+  top: 18px;
+
+  width: 87px;
+  margin: -18px auto 0;
+
   font-size: 12px;
   line-height: 12px;
   font-family: $basic-font;
   color: $grey-700;
+
+  background-color: $grey-450;
+
+  @media (min-width: $tablet-width) {
+    font-size: 14px;
+    line-height: 14px;
+    width: auto;
+    display: inline-block;
+    padding: 0 8px;
+
+    top: 5px;
+    margin: -5px auto 0;
+
+    background-color: $white-400;
+
+    br {
+      display: none;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    background-color: $grey-400;
+  }
 }

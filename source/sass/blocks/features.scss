@@ -1,12 +1,21 @@
 .features {
-  @media (min-width: $tablet-width) {
-    padding: 0 0 47px;
-    border-bottom: 1px solid $grey-325;
-  }
+  @media (min-width: $tablet-width) and (max-width: $tablet-width-only) {
+    position: relative;
 
-  @media (min-width: $desktop-width) {
-    padding: 0;
-    border: none;
+    padding: 0 0 36px;
+
+    &::before,
+    &::after {
+      @include decor-pseudo-border;
+    }
+
+    &::before {
+      right: 50%;
+    }
+
+    &::after {
+      left: 50%;
+    }
   }
 }
 
@@ -15,8 +24,9 @@
     display: grid;
 
     column-gap: 60px;
-    row-gap: 37px;
+
     grid-template-columns: 1fr 1fr;
+    row-gap: 26px;
   }
 
   @media (min-width: $desktop-width) {
@@ -27,16 +37,23 @@
 
 .features__title {
   margin: 0 0 38px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 0 32px;
+  }
 }
 
 .features__item {
   display: flex;
+  align-items: center;
   margin: 0 0 20px;
 
   @include format-text;
 
-  &:last-child {
-    margin: 0;
+  @media (max-width: $mobile-width-only) {
+    &:last-child {
+      margin: 0;
+    }
   }
 
   &::before {
@@ -109,6 +126,24 @@
 
     &--theme-thime::after {
       content: "4";
+    }
+  }
+
+  @media (min-width: $tablet-width) and (max-width: $tablet-width-only) {
+    &--theme-healthy {
+      margin: 0 94px 0 0;
+    }
+
+    &--theme-powdery {
+      margin: 0 78px 0 0;
+    }
+
+    &--theme-food {
+      margin: 0 76px 0 0;
+    }
+
+    &--theme-thime {
+      margin: 0 75px 0 0;
     }
   }
 }
