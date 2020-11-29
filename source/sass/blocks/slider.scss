@@ -1,14 +1,41 @@
 .slider {
+  position: relative;
+
   text-align: center;
 
   @media (min-width: $tablet-width) and (max-width: $tablet-width-only) {
-    background-color: $grey-450;
-    padding: 0 0 33px;
+    padding: 0 0 65px;
+
+    background-image: linear-gradient(to top, $grey-450 462px, transparent 462px, transparent 100%);
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+
+      width: 100vw;
+      height: 100%;
+
+      background-image: linear-gradient(to top, $grey-450 462px, transparent 462px, transparent 100%);
+    }
+
+    &::before {
+      left: 100%;
+    }
+
+    &::after {
+      right: 100%;
+    }
   }
 }
 
 .slider__list {
-  margin: 0 0 23px;
+  margin: 0 0 15px;
+
+  @media (min-width: $desktop-width) {
+    margin: 0 0 5px;
+  }
 }
 
 .slider__item {
@@ -19,14 +46,29 @@
   }
 }
 
+.slider__img {
+  vertical-align: bottom;
+
+  @media (min-width: $tablet-width) {
+    width: 354px;
+    height: 535px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 365px;
+    height: 536px;
+  }
+}
+
 .slider__control {
-  display: inline-flex;
-  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
   align-items: center;
+  min-height: 40px;
 }
 
 .slider__button {
-  padding: 4px 10px;
+  padding: 4px 18px;
 
   font-size: 16px;
   line-height: 20px;
@@ -76,7 +118,7 @@
   @media (min-width: $tablet-width) {
     position: absolute;
     top: -12px;
-    right: 180px;
+    right: 194px;
 
     display: block;
     width: 34px;
@@ -85,7 +127,6 @@
     background-color: $white-400;
     border: 1px solid $grey-500;
     border-radius: 50%;
-    box-shadow: inset 0 0 0 10px $white-400,
-      inset 0 0 0 16px $green-400;
+    box-shadow: inset 0 0 0 12px $white-400, inset 0 0 0 16px $green-400;
   }
 }

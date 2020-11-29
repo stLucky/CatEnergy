@@ -1,6 +1,6 @@
 .container {
   padding: 0 20px;
-  overflow-x: hidden;
+  overflow: hidden;
 
   @media (min-width: $tablet-width) {
     padding: 0 30px;

@@ -7,13 +7,17 @@
     display: flex;
     flex-wrap: wrap;
   }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 0 5px;
+  }
 }
 
 .main-nav__item {
   @media (max-width: $mobile-width-only) {
     position: relative;
 
-    padding: 22px 0 24px;
+    padding: 22px 0 21px;
 
     &::after,
     &::before {
@@ -39,6 +43,11 @@
 
     &--current {
       border-bottom: 2px solid $green-400;
+
+      .main-nav__link:hover,
+      .main-nav__link:active {
+        opacity: 1;
+      }
     }
   }
 }
@@ -50,6 +59,14 @@
   color: $black-400;
   text-transform: uppercase;
 
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
   @media (min-width: $tablet-width) {
     font-weight: 400;
     font-size: 18px;
@@ -59,5 +76,6 @@
   @media (min-width: $desktop-width) {
     font-size: 20px;
     line-height: 30px;
+    color: $white-400;
   }
 }

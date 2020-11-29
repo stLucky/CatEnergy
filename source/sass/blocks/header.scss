@@ -4,6 +4,14 @@
       display: none;
     }
   }
+
+  @media (min-width: $tablet-width) {
+    padding: 24px 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 54px 0 29px;
+  }
 }
 
 .header--opened {
@@ -74,6 +82,16 @@
 
 .header__logo-img {
   vertical-align: middle;
+
+  @media (min-width: $tablet-width) {
+    width: 174px;
+    height: 52px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 202px;
+    height: 59px;
+  }
 }
 
 .header__toggle {
