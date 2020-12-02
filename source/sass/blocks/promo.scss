@@ -4,10 +4,14 @@
   text-align: center;
   color: $white-400;
 
-  background-image: url("../img/background-cat-mobile.jpg"), linear-gradient($green-450, $green-450);
+  background-image: url("../img/background-cat_mobile.jpg"), linear-gradient($green-450, $green-450);
   background-repeat: no-repeat;
   background-position: top center;
   background-size: auto 302px;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/background-cat_mobile@2x.jpg"), linear-gradient($green-450, $green-450);
+  }
 
   @media (min-width: $tablet-width) {
     position: relative;
@@ -30,12 +34,18 @@
       left: 50%;
       z-index: -1;
 
-      width: 720px;
+      width: 50%;
       height: 694px;
 
       background-color: $green-450;
-      background-image: url("../img/background-cat-desktop.jpg");
+      background-image: url("../img/background-cat_desktop.jpg");
+      background-repeat: no-repeat;
       background-position: bottom right;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/background-cat_desktop@2x.jpg");
+        background-size: auto 694px;
+      }
     }
   }
 }
@@ -84,12 +94,13 @@
 
   @media (min-width: $tablet-width) {
     position: absolute;
-    left: 60px;
     bottom: 0;
+    left: 29px;
     z-index: -1;
 
     width: 709px;
     height: 609px;
+    margin: 0;
   }
 
   @media (min-width: $desktop-width) {
