@@ -1,0 +1,9 @@
+.body__header {
+  &--special-margin {
+    margin: 0 0 27px;
+
+    @media (min-width: $tablet-width) {
+    margin: 0 0 41px;
+  }
+  }
+}

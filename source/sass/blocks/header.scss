@@ -10,7 +10,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding: 54px 0 29px;
+    padding: 54px 0 32px;
   }
 }
 
@@ -52,6 +52,7 @@
 .header__container {
   @media (min-width: $tablet-width) {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-end;
   }
@@ -80,6 +81,10 @@
   }
 }
 
+.header__logo {
+  display: block;
+}
+
 .header__logo-img {
   vertical-align: middle;
 
@@ -102,5 +107,15 @@
 
   @media (min-width: $tablet-width) {
     display: none;
+  }
+}
+
+.header__main-nav {
+  @media (min-width: $tablet-width) {
+    max-width: 440px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 740px;
   }
 }
