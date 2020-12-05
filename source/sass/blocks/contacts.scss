@@ -4,6 +4,9 @@
   justify-content: space-between;
   padding: 28px 0 26px;
 
+  &--special-padding {
+    padding: 34px 0 20px;
+  }
 
   @media (min-width: $tablet-width) {
     align-items: center;
@@ -35,6 +38,15 @@
         right: 100%;
       }
     }
+
+    &--no-theme-white {
+      background-color: transparent;
+
+      &::before,
+      &::after {
+        display: none;
+      }
+    }
   }
 
   @media (min-width: $desktop-width) {
@@ -44,6 +56,8 @@
 
     width: 570px;
     padding: 55px 85px 51px 76px;
+
+    background-color: $white-400;
 
     &::before,
     &::after {

@@ -30,14 +30,17 @@
 
 .main__title {
   margin: 0 0 37px;
-  padding: 27px 0 0;
 
   @media (min-width: $tablet-width) {
     margin: 0 0 84px;
+
+    &--special-margin {
+      margin: 0 0 55px 39px;
+    }
   }
 
   @media (min-width: $desktop-width) {
-    padding: 37px 0 0;
+    margin: 0 0 57px;
   }
 }
 
@@ -48,7 +51,7 @@
 }
 
 .main__text {
-  margin: 0 0 19px;
+  margin: 0 0 39px;
 
   line-height: 18px;
   text-transform: uppercase;
