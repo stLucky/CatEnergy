@@ -2,7 +2,7 @@
   position: relative;
 
   order: 1;
-  padding: 51px 40px 40px;
+  padding: 25px 0;
 
   text-align: center;
 
@@ -10,8 +10,13 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    padding: 41px 26px 28px;
 
     border: 2px solid $grey-400;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 51px 36px 38px;
   }
 }
 
@@ -26,7 +31,6 @@
   &::before {
     content: "";
 
-    display: block;
     width: 30px;
     height: 30px;
     margin: 0 0 23px;
@@ -38,7 +42,9 @@
     @media (min-width: $mobile-tablet-width) {
       width: 60px;
       height: 60px;
-      margin: 0 0 59px;
+      margin: 0 0 46px;
+
+      background-image: url("../img/plus_tablet.svg");
     }
   }
 
@@ -56,9 +62,15 @@
   @include format-product-desc;
 
   @media (min-width: $mobile-tablet-width) {
-    margin: 0 0 87px;
+    margin: 0 0 85px;
 
     font-size: 16px;
     line-height: 18px;
+  }
+}
+
+.all-product__button {
+  @media (min-width: $mobile-tablet-width) and (max-width: $mobile-width-only) {
+    padding: 10px 15px;
   }
 }
