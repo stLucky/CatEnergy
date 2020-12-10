@@ -1,9 +1,20 @@
 .body__header {
   &--special-margin {
     margin: 0 0 27px;
-
-    @media (min-width: $tablet-width) {
-    margin: 0 0 41px;
   }
+
+  @media (min-width: $tablet-width) {
+    margin: 0 0 48px;
+    padding: 15px 0;
+  }
+
+
+  @media (min-width: $desktop-width) {
+    margin: 0 0 8px;
+    padding: 20px 0;
+
+    &--special-margin {
+      margin: 0 0 55px;
+    }
   }
 }

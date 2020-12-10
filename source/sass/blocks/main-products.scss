@@ -1,31 +1,38 @@
-$margin-right-mobile-tablet: 40px;
-$margin-right-tablet: 60px;
-$margin-right-desktop: 80px;
+$offset-mobile-tablet: 40px;
+$offset-tablet: 60px;
+$offset-x-desktop: 80px;
+$offset-y-desktop: 63px;
+
+@mixin size($col, $offset) {
+  width: calc(100% / #{$col} - #{$offset});
+}
 
 .main-products__list {
   @media (min-width: $mobile-tablet-width) {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
-    margin: 0 #{-$margin-right-mobile-tablet} 0 0;
+    margin: -$offset-mobile-tablet/2;
   }
 
   @media (min-width: $tablet-width) {
-    margin: 0 #{-$margin-right-tablet} 0 0;
+    margin: -$offset-tablet/2;
   }
 
   @media (min-width: $desktop-width) {
-    margin: 0 #{-3*$margin-right-desktop} 0 0;
+    margin: -#{$offset-y-desktop/2} -#{$offset-x-desktop/2};
   }
 }
 
 .main-products__item {
   position: relative;
 
-  padding: 19px 0 25px;
+  padding: 20px 0 25px;
 
   &::before,
   &::after {
+    background-color: $grey-475;
+
     @include decor-pseudo-border;
   }
 
@@ -38,9 +45,10 @@ $margin-right-desktop: 80px;
   }
 
   @media (min-width: $mobile-tablet-width) {
-    width: calc((100% - 2 * #{$margin-right-mobile-tablet}) / 2);
-    margin: 0 $margin-right-mobile-tablet 60px 0;
-    padding: 30px 26px;
+    margin: $offset-mobile-tablet/2;
+    padding: 0 26px 30px;
+
+    @include size(2, $offset-mobile-tablet);
 
     &::before,
     &::after {
@@ -48,35 +56,37 @@ $margin-right-desktop: 80px;
     }
 
     &--all {
-      margin: 100px $margin-right-mobile-tablet 60px 0;
+      margin: 100px $offset-mobile-tablet/2 $offset-mobile-tablet/2;
     }
   }
 
   @media (min-width: $tablet-width) {
-    width: calc((100% - 2 * #{$margin-right-tablet}) / 2);
-    margin: 0 $margin-right-tablet 60px 0;
-    padding: 40px 36px;
+    margin: $offset-tablet/2;
+    padding: 0 38px 40px;
+
+    @include size(2, $offset-tablet);
 
     &--all {
-      margin: 100px $margin-right-tablet 60px 0;
+      margin: 110px $offset-tablet/2 $offset-tablet/2;
     }
   }
 
   @media (min-width: $tablet-desktop-width) {
-    width: calc((100% - 2 * #{$margin-right-tablet} * 2) / 3);
-    margin: 0 $margin-right-tablet 60px 0;
+    @include size(3, $offset-tablet);
 
     &--all {
-      margin: 100px $margin-right-tablet 60px 0;
+      margin: 110px $offset-tablet/2 $offset-tablet/2;
     }
   }
 
   @media (min-width: $desktop-width) {
-    width: calc((100% - 2 * #{$margin-right-desktop} * 3) / 4);
-    margin: 0 $margin-right-desktop 63px 0;
+    margin: $offset-y-desktop/2 $offset-x-desktop/2;
+    padding: 0 38px 40px;
+
+    @include size(4, $offset-x-desktop);
 
     &--all {
-      margin: 100px $margin-right-desktop 60px 0;
+      margin: 110px $offset-x-desktop/2 $offset-y-desktop/2;
     }
   }
 }

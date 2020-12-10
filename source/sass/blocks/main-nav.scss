@@ -7,10 +7,6 @@
     display: flex;
     flex-wrap: wrap;
   }
-
-  @media (min-width: $desktop-width) {
-    margin: 0 0 5px;
-  }
 }
 
 .main-nav__item {
@@ -21,6 +17,8 @@
 
     &::after,
     &::before {
+      background-color: $grey-325;
+
       @include decor-pseudo-border;
     }
 

@@ -31,6 +31,10 @@
 .main__title {
   margin: 0 0 37px;
 
+  &--margin {
+    margin: 0 0 41px;
+  }
+
   @media (min-width: $tablet-width) {
     margin: 0 0 84px;
 
@@ -40,7 +44,11 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin: 0 0 57px;
+    margin: 0 0 86px;
+
+    &--special-margin {
+      margin: 0 0 57px;
+    }
   }
 }
 
@@ -64,13 +72,13 @@
 }
 
 .main__main-products {
-  margin: 0 0 28px;
+  margin: 0 0 25px;
 
   @media (min-width: $tablet-width) {
-    margin: 0 0 8px;
+    margin: 0 0 68px;
   }
 
   @media (min-width: $desktop-width) {
-    margin: 0 0 12px;
+    margin: 0 0 74px;
   }
 }
