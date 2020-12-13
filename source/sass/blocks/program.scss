@@ -1,5 +1,5 @@
 .program {
-  padding: 21px 22px 18px;
+  padding: 21px 22px 20px;
 
   background-color: $grey-400;
 
@@ -8,7 +8,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding: 42px 52px 58px;
+    padding: 40px 52px 59px;
   }
 }
 
@@ -35,7 +35,7 @@
         width: 200px;
         height: 211px;
 
-        background-image: url("../img/cat-slim.svg");
+        background-image: url("../img/cat-slim_tablet.svg");
       }
     }
 
@@ -44,12 +44,12 @@
 
       &::after {
         top: 14px;
-        right: 30px;
+        right: 28px;
 
         width: 268px;
         height: 200px;
 
-        background-image: url("../img/cat-weight.svg");
+        background-image: url("../img/cat-weight_tablet.svg");
       }
     }
   }
@@ -99,7 +99,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin: 0 0 39px;
+    margin: 0 0 40px;
 
     &::before {
       display: block;
@@ -110,6 +110,8 @@
         width: 100px;
         height: 106px;
         margin: 0 62px 0 0;
+
+        background-image: url("../img/cat-slim_desktop.svg");
       }
     }
 
@@ -118,21 +120,23 @@
         width: 134px;
         height: 100px;
         margin: 6px 47px 0 -19px;
+
+        background-image: url("../img/cat-weight_desktop.svg");
       }
     }
   }
 }
 
 .program__slogan {
-  margin: 0 0 18px;
+  margin: 0 0 20px;
   padding: 0 0 22px;
 
   border-bottom: 1px solid $grey-425;
 
   @include format-text;
 
-  br {
-    display: none;
+  span {
+    display: inline;
 
     @media (min-width: $tablet-width) and (max-width: $tablet-width-only) {
       display: block;
@@ -151,14 +155,17 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin: 0 0 27px;
+    margin: 0 0 26px;
   }
 }
 
 .program__link {
+  $strip-width: 18px;
+  $triangle-width: 6px;
+
   position: relative;
 
-  margin: 0 0 0 -2px;
+  margin: 0 $strip-width + $triangle-width + 5px 0 -2px;
   padding: 0 15px 0 0;
 
   font-size: 16px;
@@ -166,16 +173,13 @@
   color: $black-400;
   text-transform: uppercase;
 
-  $arrow-width: 18px;
-
-
   &::after {
     content: "";
     position: absolute;
     top: 10px;
     left: 100%;
 
-    width: $arrow-width;
+    width: $strip-width;
     height: 2px;
 
     background-color: $black-400;
@@ -187,9 +191,9 @@
     content: "";
     position: absolute;
     top: 5px;
-    left: calc(100% + #{$arrow-width});
+    left: calc(100% + #{$strip-width});
 
-    border: 6px solid $black-400;
+    border: $triangle-width solid $black-400;
     border-top-color: transparent;
     border-right-width: 0;
     border-bottom-color: transparent;

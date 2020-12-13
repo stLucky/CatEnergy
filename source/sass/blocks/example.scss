@@ -2,7 +2,7 @@ $text-width-desktop: 436px;
 $offset-background: 325px;
 
 .example {
-  padding: 27px 0 25px;
+  padding: 27px 0 26px;
 
   background-color: $grey-450;
 
@@ -31,7 +31,7 @@ $offset-background: 325px;
   }
 
   @media (min-width: $desktop-width) {
-    margin: 46px 0 146px;
+    margin: 48px 0 146px;
   }
 }
 
@@ -64,9 +64,9 @@ $offset-background: 325px;
   @media (min-width: $tablet-width) {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: flex-start;
-    margin: 0 0 80px;
+    margin: 0 0 42px;
   }
 
   @media (min-width: $desktop-width) {
@@ -82,12 +82,13 @@ $offset-background: 325px;
   margin: 0 0 34px;
 
   @media (min-width: $tablet-width) {
-    margin: 0;
+    justify-content: flex-start;
+    width: 70%;
   }
 
   @media (min-width: $desktop-width) {
-    justify-content: flex-start;
-    margin: 0 0 55px;
+    width: auto;
+    margin: 0 0 51px;
   }
 }
 
@@ -99,7 +100,11 @@ $offset-background: 325px;
   }
 
   @media (min-width: $tablet-width) {
-    margin: 0 42px 0 0;
+    margin: 0 42px 6px 0;
+
+    &:last-child {
+      margin: 0 0 6px 0;
+    }
   }
 }
 
@@ -110,11 +115,12 @@ $offset-background: 325px;
   text-align: center;
   text-transform: uppercase;
 
-  br {
-    display: none;
+  .break {
+    display: inline;
   }
 
   @media (min-width: $tablet-width) {
+    width: 30%;
     margin: 10px 0 0;
 
     font-size: 20px;
@@ -127,6 +133,8 @@ $offset-background: 325px;
   }
 
   @media (min-width: $desktop-width) {
+    width: auto;
+
     text-align: left;
 
     br {

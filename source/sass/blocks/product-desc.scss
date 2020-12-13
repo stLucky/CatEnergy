@@ -1,8 +1,7 @@
 .product-desc {
+  border-spacing: 0;
   font-size: 12px;
   line-height: 16px;
-  border-spacing: 0;
-
 
   @include format-product-desc;
 }
@@ -13,11 +12,14 @@
 
   @media (min-width: $mobile-tablet-width) {
     padding: 7px 0 7px;
+
     font-size: 16px;
+
     border-bottom: 1px solid $grey-500;
   }
 }
 
 .product-desc__data {
+  max-width: 70%;
   padding: 0;
 }

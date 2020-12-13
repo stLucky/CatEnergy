@@ -70,6 +70,14 @@
 }
 
 .all-product__button {
+  &:hover {
+    background-color: $grey-475;
+  }
+
+  &:active {
+    color: rgba($grey-700, 0.3);
+  }
+
   @media (min-width: $mobile-tablet-width) and (max-width: $mobile-width-only) {
     padding: 10px 15px;
   }

@@ -11,6 +11,7 @@
   &::before,
   &::after {
     @include decor-pseudo-border;
+    background-color: $grey-425;
   }
 
   &::before {
@@ -29,7 +30,7 @@
       display: none;
     }
 
-    &:last-child {
+    &--radio {
       padding: 25px 28px;
 
       border: 1px solid $grey-350;
@@ -40,5 +41,9 @@
     width: 47%;
     margin: 0;
     padding: 0;
+
+    &--radio {
+      padding: 25px 28px;
+    }
   }
 }
