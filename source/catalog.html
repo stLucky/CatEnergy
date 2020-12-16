@@ -4,6 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Функциональное питание для котов "Cat Energy"</title>
+  <link rel="preload" href="fonts/oswaldregular.woff" as="font" type="font/woff">
+  <link rel="preload" href="fonts/oswaldregular.woff2" as="font" type="font/woff2">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body class="page__body">
@@ -487,7 +489,7 @@
           </ul>
           <div class="gift">
             <p class="gift__text">
-              Закажите все<span class="break"></span> и&nbsp;получите чехол для<span class="break"></span> кота в подарок!
+              Закажите все<br> и&nbsp;получите чехол для<br> кота в подарок!
             </p>
           </div>
         </div>
@@ -505,7 +507,8 @@
         </p>
       </div>
     </div>
-    <div class="footer__map" id="map">
+    <div class="footer__map">
+      <div class="footer__map-content" id="map"></div>
     </div>
     <div class="container">
       <div class="footer__bottom">
@@ -540,7 +543,7 @@
               <span class="visually-hidden">
                 Мы в Фейсбуке
               </span>
-              <svg class="social__icon social__icon--fb" width="22" height="22" fill="none">
+              <svg class="social__icon social__icon--fb" width="22" height="22">
                 <use xlink:href="img/sprite.svg#icon-fb"></use>
               </svg>
             </a>
@@ -559,8 +562,7 @@
       </div>
     </div>
   </footer>
-  <script src="js/header.min.js"></script>
-  <script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
-  <script src="js/map-api.min.js"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=fc4e44cb-c351-4462-93d4-686a12532872&lang=ru_RU"></script>
+  <script src="js/script.min.js"></script>
 </body>
 </html>

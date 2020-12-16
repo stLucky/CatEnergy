@@ -2,8 +2,6 @@ const header = document.querySelector(".header");
 const headerToggle = document.querySelector(".header__toggle");
 const toogleText = headerToggle.querySelector(".visually-hidden")
 
-header.classList.remove("header--nojs");
-
 headerToggle.addEventListener("click", function () {
   header.classList.toggle("header--opened");
   if (header.classList.contains("header--opened")) {
@@ -12,3 +10,5 @@ headerToggle.addEventListener("click", function () {
     toogleText.textContent = "Открыть меню"
   }
 });
+
+header.classList.remove("header--nojs");
