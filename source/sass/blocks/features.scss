@@ -7,6 +7,7 @@
     &::before,
     &::after {
       @include decor-pseudo-border;
+      background-color: $grey-325;
     }
 
     &::before {

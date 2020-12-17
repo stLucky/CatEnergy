@@ -39,8 +39,8 @@
     max-width: 150px;
     margin: 0 auto 16px;
 
-    br {
-      display: none;
+    .break {
+      display: inline;
     }
   }
 
@@ -51,6 +51,14 @@
 
 .main-product__link-title {
   color: $black-300;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .main-product__desc {
@@ -63,6 +71,19 @@
   min-height: 112px;
 
   text-align: center;
+
+  transition-property: transform, filter;
+  transition-duration: 0.3s;
+
+  &:hover {
+    transform: scale(1.05);
+    filter: drop-shadow(10px 10px 5px rgba($black-400, 0.5));
+  }
+
+  &:active {
+    transform: scale(0.9);
+    filter: drop-shadow(5px 5px 2px rgba($black-400, 0.5));
+  }
 
   @media (min-width: $mobile-tablet-width) {
     display: flex;
@@ -91,8 +112,19 @@
   @media (min-width: $mobile-tablet-width) {
     margin: 0;
 
+    &--offset {
+      position: relative;
+      top: 6px;
+    }
+
     &--special-margin {
       margin: 0;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &--offset {
+      position: static;
     }
   }
 }

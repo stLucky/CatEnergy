@@ -1,7 +1,7 @@
 .result {
   align-items: center;
   width: 124px;
-  padding: 15px 0 0;
+  padding: 13px 0 0;
 
   text-align: center;
 
@@ -21,19 +21,16 @@
   text-transform: uppercase;
 
   @media (min-width: $tablet-width) {
+    margin: 0 0 12px;
+
     font-size: 30px;
     line-height: 37px;
-
-    margin: 0;
   }
 }
 
 .result__definition {
-  position: relative;
-  top: 18px;
-
   width: 87px;
-  margin: -18px auto 0;
+  margin: 0 auto -16px;
 
   font-size: 12px;
   line-height: 12px;
@@ -43,19 +40,17 @@
   background-color: $grey-450;
 
   @media (min-width: $tablet-width) {
-    font-size: 14px;
-    line-height: 14px;
-    width: auto;
-    display: inline-block;
+    width: max-content;
+    margin: 6px auto -6px;
     padding: 0 8px;
 
-    top: 5px;
-    margin: -5px auto 0;
+    font-size: 14px;
+    line-height: 14px;
 
     background-color: $white-400;
 
-    br {
-      display: none;
+    .break {
+      display: inline;
     }
   }
 

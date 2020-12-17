@@ -10,10 +10,17 @@
 }
 
 .main-nav__item {
+  &--current {
+    .main-nav__link:hover,
+    .main-nav__link:active {
+      opacity: 1;
+    }
+  }
+
   @media (max-width: $mobile-width-only) {
     position: relative;
 
-    padding: 22px 0 21px;
+    padding: 22px 0 23px;
 
     &::after,
     &::before {

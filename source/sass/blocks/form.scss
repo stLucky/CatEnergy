@@ -20,6 +20,7 @@
   @media (min-width: $desktop-width) {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     margin: 0 0 69px;
   }
 }
@@ -75,7 +76,7 @@
     &::before {
       content: "";
       position: absolute;
-      top: 20px;
+      top: 21px;
       right: calc(100% + 40px);
 
       width: 100vw;
@@ -85,11 +86,11 @@
     }
 
     &::after {
-      top: 20px;
+      top: 21px;
     }
 
-    br {
-      display: none;
+    .break {
+      display: inline;
     }
   }
 }
@@ -119,6 +120,7 @@
 .form__label {
   display: flex;
   flex-wrap: wrap;
+  justify-content: flex-start;
   align-items: center;
 }
 
@@ -197,12 +199,14 @@
 
 .form__input {
   position: relative;
-
+  width: 0;
   flex-grow: 1;
   padding: 12px 15px;
+  align-self: flex-start;
 
   line-height: 18px;
   font-family: inherit;
+  height: 45px;
 
   border: 1px solid $grey-350;
 
@@ -211,6 +215,7 @@
   &::placeholder {
     font-family: $custom-font;
     text-transform: uppercase;
+    opacity: 1;
 
     @include format-form-text;
 
@@ -224,10 +229,16 @@
   }
 
   &:focus {
-    outline: 2px solid $grey-700;
+    outline: none;
+    box-shadow: 0 0 0 2px $grey-700;
+
+    & + .form__icon {
+      color: $green-400;
+    }
   }
 
   @media (min-width: $tablet-width) {
+    height: 52px;
     padding: 10px 20px;
 
     font-size: 20px;
@@ -235,10 +246,10 @@
   }
 
   &--number {
-    -moz-appearance: textfield;
+    appearance: textfield;
 
     &::-webkit-inner-spin-button {
-      -webkit-appearance: none;
+      appearance: none;
     }
   }
 
@@ -265,13 +276,22 @@
       padding: 10px 17px;
     }
   }
+
+  &--error {
+    box-shadow: 0 0 0 2px $red-200;
+
+    & + .form__icon {
+      color: $red-200;
+    }
+  }
 }
 
 .form__icon {
   position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 
   &--email {
-    top: 15px;
     right: 15px;
 
     width: 19px;
@@ -279,7 +299,6 @@
   }
 
   &--phone {
-    top: 12px;
     right: 13px;
 
     width: 20px;
@@ -288,24 +307,20 @@
 
   @media (min-width: $tablet-width) {
     &--email {
-      top: 19px;
-      right: 14px;
+      right: 17px;
     }
 
     &--phone {
-      top: 17px;
-      right: 13px;
+      right: 17px;
     }
   }
 
   @media (min-width: $desktop-width) {
     &--email {
-      top: 17px;
       right: 22px;
     }
 
     &--phone {
-      top: 15px;
       right: 16px;
     }
   }
@@ -363,9 +378,10 @@
   opacity: 0.3;
 }
 
+
 .form__radio:focus + .form__label-text::before,
 .form__checkbox:focus + .form__label-text::before {
-  border: 2px solid $grey-700;
+  border: 1px solid $grey-525;
 }
 
 .form__fieldset--contacts {
@@ -387,7 +403,7 @@
   margin: 0 0 32px;
 
   @media (min-width: $tablet-width) {
-    margin: 0 0 54px;
+    margin: 0 0 55px;
 
     .form__legend {
       margin: 0 0 57px;
@@ -400,7 +416,7 @@
     }
 
     .form__field {
-      width: 45%;
+      width: 45.5%;
       margin: 0 0 32px;
 
       &:last-child,
@@ -425,14 +441,18 @@
 
   cursor: pointer;
 
+  @media (max-width: $mobile-width-only) {
+    padding: 10px 25px;
+  }
+
   @media (min-width: $tablet-width) {
     width: 45%;
     margin: 0 58px 0 0;
   }
 
   @media (min-width: $desktop-width) {
-    width: 47%;
-    margin: 0 74px 0 0;
+    width: 46.5%;
+    margin: 0 79px 0 0;
   }
 }
 
@@ -452,7 +472,7 @@
     vertical-align: middle;
   }
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: $desktop-width) {
     margin: 0 0 10px;
   }
 }
