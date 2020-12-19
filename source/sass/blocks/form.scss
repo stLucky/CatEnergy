@@ -230,7 +230,8 @@
 
   &:focus {
     outline: none;
-    box-shadow: 0 0 0 2px $grey-700;
+    border-color: $grey-700;
+    box-shadow: 0 0 0 1px $grey-700;
 
     & + .form__icon {
       color: $green-400;
@@ -278,7 +279,8 @@
   }
 
   &--error {
-    box-shadow: 0 0 0 2px $red-200;
+    border-color: $red-200;
+    box-shadow: 0 0 0 1px $red-200;
 
     & + .form__icon {
       color: $red-200;

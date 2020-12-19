@@ -138,7 +138,7 @@
   span {
     display: inline;
 
-    @media (min-width: $tablet-width) and (max-width: $tablet-width-only) {
+    @media (min-width: $tablet-width) and (max-width: $tablet-width + 30px) {
       display: block;
     }
   }

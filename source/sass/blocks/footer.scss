@@ -25,14 +25,16 @@
     background-image: url("../img/map_mobile@2x.png");
   }
 
-  @media (min-width: $tablet-width) {
-    height: 400px;
-
+  @media (min-width: $mobile-tablet-width) {
     background-image: url("../img/map_tablet.png");
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/map_tablet@2x.png");
     }
+  }
+
+  @media (min-width: $tablet-width) {
+    height: 400px;
   }
 
   @media (min-width: $desktop-width) {
