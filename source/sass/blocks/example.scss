@@ -142,9 +142,11 @@ $offset-background: 325px;
     .break {
       display: none;
     }
+  }
+}
 
-    &--special {
-      margin: 0 0 0 62px;
-    }
+.example__сosts-special {
+  @media (min-width: $desktop-width) {
+    margin: 0 0 0 62px;
   }
 }

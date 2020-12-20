@@ -74,6 +74,7 @@
 
   @media (min-width: $tablet-width) {
     margin: 5px 0 0;
+
     font-size: 20px;
     line-height: 24px;
   }
@@ -97,15 +98,18 @@
 
     font-size: 16px;
     text-align: right;
-
-    &--special {
-      display: block;
-      margin: 18px 0 0;
-    }
   }
 
   @media (min-width: $desktop-width) {
     margin: 4px 55px 0 0;
+
     text-align: left;
+  }
+}
+
+.contacts__text-special {
+  @media (min-width: $tablet-width) {
+    display: block;
+    margin: 18px 0 0;
   }
 }
