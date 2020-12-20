@@ -174,7 +174,8 @@
 
   @media (max-width: $mobile-width-only) {
     &--after {
-      width: 100%;
+      position: absolute;
+      left: 46%;
     }
   }
 
