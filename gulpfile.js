@@ -14,7 +14,10 @@ const webp = require("gulp-webp");
 const svgstore = require("gulp-svgstore");
 const cheerio = require("gulp-cheerio");
 const del = require("del");
+const gulpif = require("gulp-if");
 const sync = require("browser-sync").create();
+
+const isProd = process.argv.includes("build");
 
 
 // Styles
@@ -62,12 +65,12 @@ exports.scripts = scripts;
 // Images
 
 const images = () => {
-  return gulp.src("source/img/**/*.{jpg,png.svg}")
-    .pipe(imagemin([
+  return gulp.src("source/img/**/*.{jpg,png,svg}")
+    .pipe(gulpif(isProd, imagemin([
       imagemin.mozjpeg({ quality: 85, progressive: true }),
       imagemin.optipng({ optimizationLevel: 3 }),
       imagemin.svgo()
-    ]))
+    ])))
     .pipe(gulp.dest("build/img"))
 }
 
@@ -87,12 +90,12 @@ exports.createWebp = createWebp;
 
 const sprite = () => {
   return gulp.src("source/img/icons/icon-*.svg")
-    .pipe(svgstore({inlineSvg: true, svgAttrs: true}))
+    .pipe(svgstore({ inlineSvg: true, svgAttrs: true }))
     .pipe(cheerio({
       run: function ($) {
         $("style").remove();
       },
-      parserOptions: {xmlMode: true}
+      parserOptions: { xmlMode: true }
     }))
     .pipe(rename("sprite.svg"))
     .pipe(gulp.dest("build/img"))
@@ -106,7 +109,6 @@ const copy = () => {
   return gulp.src([
     "source/fonts/*.{woff2,woff}",
     "source/*.ico",
-    "source/img/**/*.{jpg,png,svg}"
   ],
     {
       base: "source"
@@ -171,17 +173,7 @@ const build = gulp.series(
 exports.build = build;
 
 exports.default = gulp.series(
-  clean,
-  gulp.parallel(
-    styles,
-    html,
-    scripts,
-    copy,
-    sprite,
-    createWebp
-  ),
-  gulp.series(
-    server,
-    watcher
-  )
+  build,
+  server,
+  watcher
 );
