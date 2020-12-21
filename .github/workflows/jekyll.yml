@@ -1,4 +1,4 @@
-name: Jekyll site CI
+name: Project test & build
 
 on:
   push:
@@ -12,9 +12,26 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Build the site in the jekyll/builder container
-      run: |
-        docker run \
-        -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
-        jekyll/builder:latest /bin/bash -c "chmod 777 /srv/jekyll && jekyll build --future"
+    - name: Checkout 🛎️
+        uses: actions/checkout@v2.3.1
+        with:
+          persist-credentials: false
+
+      - name: Install 🔧
+        run: npm install
+
+      - name: Run Test 🔨
+        run: npm run test
+
+      - name: Build 👷
+        run: npm run build
+
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@3.7.1
+        with:
+          # в значение GITHUB_TOKEN помещается ссылка на ваш секрет в репозитории
+          # в данном случае его название KEY
+          GITHUB_TOKEN: ${{ secrets.ST_LUCKKY }}
+          BRANCH: gh-pages
+          FOLDER: public
+          CLEAN: true
