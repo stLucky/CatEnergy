@@ -5,9 +5,9 @@ name: Project test & build
 # в данном случае это push и pull_request, в ветку prod
 on:
   push:
-    branches: [ master ]
+    branches: [ prod ]
   pull_request:
-    branches: [ master ]
+    branches: [ prod ]
 
 # выполняемые действия
 jobs:
@@ -38,6 +38,6 @@ jobs:
           # в значение GITHUB_TOKEN помещается ссылка на ваш секрет в репозитории
           # в данном случае его название KEY
           GITHUB_TOKEN: ${{ secrets.ST_LUCKKY }}
-          BRANCH: master
+          BRANCH: gh-pages
           FOLDER: public
           CLEAN: true
